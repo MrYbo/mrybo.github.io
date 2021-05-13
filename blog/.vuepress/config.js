@@ -13,14 +13,6 @@ module.exports = {
       }
     ]
   ],
-  locales: {
-    "/": {
-      lang: "en-US"
-    },
-    "/zh/": {
-      lang: "zh-CN"
-    }
-  },
   theme: "gungnir",
   themeConfig: {
     repo: "mrybo/mrybo.github.io",
@@ -31,18 +23,7 @@ module.exports = {
     hitokoto: true,
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
-    locales: {
-      "/": {
-        label: "English",
-        selectText: "Languages",
-        nav: require("./configs/nav/en")
-      },
-      "/zh/": {
-        label: "简体中文",
-        selectText: "选择语言",
-        nav: require("./configs/nav/zh"),
-      }
-    },
+
 
     rss: {
       site_url: "https://mrybo.github.io",
@@ -78,18 +59,23 @@ module.exports = {
       },
       {
         path: "/img/home-bg/2.jpg",
-        mask: "rgb(251, 170, 152, .2)"
+        mask: "rgb(251, 170, 152, .4)"
       },
       {
         path: "/img/home-bg/3.jpg",
-        mask: "rgba(68, 74, 83, .1)"
+        mask: "rgba(68, 74, 83, .4)"
       },
       {
         path: "/img/home-bg/4.jpg",
-        mask: "rgba(19, 75, 50, .2)"
+        mask: "rgba(19, 75, 50, .4)"
       },
       {
-        path: "/img/home-bg/5.jpg"
+        path: "/img/home-bg/5.jpg",
+        mask: "rgba(19, 75, 50, .4)"
+      },
+      {
+        path: "/img/home-bg/6.jpg",
+        mask: "rgba(19, 75, 50, .4)"
       }
     ],
 
