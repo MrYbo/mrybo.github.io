@@ -14,25 +14,21 @@ module.exports = [
     link: "/links/",
     icon: "fa-satellite-dish"
   },
-  {
-    text: "Docs",
-    link: "/docs/",
-    icon: "ri-book-2-fill"
-  },
-  {
-    text: "v0.1.6",
-    icon: "io-logo-github",
-    items: [
-      {
-        text: "Repository",
-        link: "https://github.com/Renovamen/vuepress-theme-gungnir",
-        icon: "oi-repo"
-      },
-      {
-        text: "Changelog",
-        link: "https://github.com/Renovamen/vuepress-theme-gungnir/blob/main/CHANGELOG.md",
-        icon: "oi-git-compare"
-      }
-    ]
-  }
+
+  // {
+  //   text: "v0.1.6",
+  //   icon: "io-logo-github",
+  //   items: [
+  //     {
+  //       text: "Repository",
+  //       link: "https://github.com/Renovamen/vuepress-theme-gungnir",
+  //       icon: "oi-repo"
+  //     },
+  //     {
+  //       text: "Changelog",
+  //       link: "https://github.com/Renovamen/vuepress-theme-gungnir/blob/main/CHANGELOG.md",
+  //       icon: "oi-git-compare"
+  //     }
+  //   ]
+  // }
 ];
