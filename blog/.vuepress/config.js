@@ -1,76 +1,88 @@
 const path = require("path");
 
 module.exports = {
-  title: "Bo Yang blog",
-  description: "This is BoYang's blog",
+  title: "Renovamen (Xiaohan Zou)",
+  description: "Renovamen's blog, powered by VuePress, themed by Gungnir.",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
-    ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]
+    [
+      "meta",
+      {
+        name: "viewport",
+        content: "width=device-width,initial-scale=1,user-scalable=no"
+      }
+    ]
   ],
   theme: "gungnir",
-  locales: {
-    "/": {
-      lang: "zh-CN"
-    },
-    "/en/": {
-      lang: "en-US"
-    },
-  },
   themeConfig: {
-    repo: "Renovamen/vuepress-theme-gungnir",
+    repo: "Renovamen/renovamen.github.io",
     docsDir: "blog",
+    docsBranch: "master",
     editLinks: true,
     lastUpdated: true,
-    hitokoto: true, // enable hitokoto (一言) or not?
+    hitokoto: true,
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
-    languageIcon: "hi-translate",
     rss: {
-      site_url: "https://mrybo.github.io",
+      site_url: "https://zxh.io",
       copyright: "Renovamen 2018-2021",
       count: 20
     },
-    // comment: {
-    //   owner: "This-is-an-Apple",
-    //   repo: "gitalk-comments",
-    //   clientId: "d6247712dc288a5a60ca",
-    //   clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
-    // },
-    // analytics: {
-    //   ga: "UA-146858305-4",
-    //   ba: "0958eaa31f4f4656f36bd33673332939"
-    // },
+    comment: {
+      owner: "This-is-an-Apple",
+      repo: "gitalk-comments",
+      clientId: "d6247712dc288a5a60ca",
+      clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
+    },
+    analytics: {
+      ga: "UA-146858305-1",
+      ba: "75381d210789d3eaf855fa16246860cc"
+    },
     katex: true,
-    mermaid: true,
-    chartjs: true,
-    roughviz: true,
-    markmap: true,
     mdPlus: {
       all: true
     },
-    locales: {
-      "/": {
-        label: "简体中文",
-        selectText: "选择语言",
-        nav: require("./configs/nav/zh"),
-        sidebar: require("./configs/sidebar/zh")
-      },
-      "/en/": {
-        label: "English",
-        selectText: "Languages",
-        nav: require("./configs/nav/en"),
-        sidebar: require("./configs/sidebar/en")
-      },
+    readingTime: {
+      excludes: ["/about", "/tags/.*", "/links"]
     },
+    nav: [
+      {
+        text: "Home",
+        link: "/",
+        icon: "fa-fort-awesome"
+      },
+      {
+        text: "About",
+        link: "/about/",
+        icon: "fa-paw"
+      },
+      {
+        text: "Tags",
+        link: "/tags/",
+        icon: "fa-tag"
+      },
+      {
+        text: "Links",
+        link: "/links/",
+        icon: "fa-satellite-dish"
+      },
+      {
+        text: "Portfolio",
+        link: "https://portfolio.zxh.io/",
+        icon: "gi-jumping-dog"
+      }
+    ],
     personalInfo: {
-      name: "Gungnir",
-      avatar: "/img/avatar.jpeg",
-      description: "A blog theme for VuePress.",
+      name: "Renovamen",
+      avatar: "/img/avatar.jpg",
+      description: "いつか、私がヒトじゃなくなっても",
       sns: {
-        github: "mrybo",
-        twitter: "https://twitter.com/UBgMJZzxwfTd4Dj",
-        zhihu: "https://www.zhihu.com/people/zhu-mu-bai-3",
-        email: "aoeybo@gmail.com"
+        github: "Renovamen",
+        linkedin: "xiaohan-zou-55bba0160",
+        facebook: "renovamen.zou",
+        twitter: "renovamen_zxh",
+        zhihu: "chao-neng-gui-su",
+        email: "renovamenzxh@gmail.com"
       }
     },
     homeHeaderImages: [
@@ -89,10 +101,14 @@ module.exports = {
       {
         path: "/img/home-bg/4.jpg",
         mask: "rgba(19, 75, 50, .2)"
+      },
+      {
+        path: "/img/home-bg/5.jpg"
       }
     ],
     pages: {
       tags: {
+        title: "Tags",
         subtitle: "Black Sheep Wall",
         bgImage: {
           path: "/img/pages/tags.jpg",
@@ -100,6 +116,7 @@ module.exports = {
         }
       },
       links: {
+        title: "Links",
         subtitle:
           "When you are looking at the stars, please put the brightest star shining night sky as my soul.",
         bgImage: {
@@ -109,24 +126,23 @@ module.exports = {
       }
     },
     footer: `
-      &copy; <a href="https://github.com/mrybo" target="_blank">Mrybo</a> 2018-2021
+      &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2021
       <br>
-      Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>
+      Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
+      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `
   },
-  
   markdown: {
     // lineNumbers: true,
     extractHeaders: ["h2", "h3", "h4", "h5"]
   },
-
   configureWebpack: () => {
     const NODE_ENV = process.env.NODE_ENV;
     if (NODE_ENV === "production") {
       return {
         output: {
           publicPath:
-            "https://cdn.jsdelivr.net/gh/mrybo/mrybo.github.io@gh-pages/"
+            "https://cdn.jsdelivr.net/gh/Renovamen/renovamen.github.io@gh-pages/"
         },
         resolve: {
           alias: {
