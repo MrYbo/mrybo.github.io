@@ -1,6 +1,6 @@
 module.exports = {
-  title: "vuepress-theme-gungnir",
-  description: "Gungnir is a blog theme for VuePress.",
+  title: "Bo Yang blog",
+  description: "This is BoYang's blog",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
     ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]
@@ -64,12 +64,10 @@ module.exports = {
       avatar: "/img/avatar.jpeg",
       description: "A blog theme for VuePress.",
       sns: {
-        github: "Renovamen",
-        linkedin: "xiaohan-zou-55bba0160",
-        facebook: "renovamen.zou",
-        twitter: "renovamen_zxh",
-        zhihu: "chao-neng-gui-su",
-        email: "renovamenzxh@gmail.com"
+        github: "mrybo",
+        twitter: "https://twitter.com/UBgMJZzxwfTd4Dj",
+        zhihu: "https://www.zhihu.com/people/zhu-mu-bai-3",
+        email: "aoeybo@gmail.com"
       }
     },
     homeHeaderImages: [
@@ -108,10 +106,9 @@ module.exports = {
       }
     },
     footer: `
-      &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2021
+      &copy; <a href="https://github.com/mrybo" target="_blank">Mrybo</a> 2018-2021
       <br>
-      Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
-      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
+      Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>
     `
   },
   markdown: {
