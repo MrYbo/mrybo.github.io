@@ -35,14 +35,12 @@ module.exports = {
       "/": {
         label: "English",
         selectText: "Languages",
-        nav: require("./configs/nav/en"),
-        sidebar: require("./configs/sidebar/en")
+        nav: require("./configs/nav/en")
       },
       "/zh/": {
         label: "简体中文",
         selectText: "选择语言",
         nav: require("./configs/nav/zh"),
-        sidebar: require("./configs/sidebar/zh")
       }
     },
 
