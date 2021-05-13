@@ -8,11 +8,11 @@ module.exports = {
   theme: "gungnir",
   locales: {
     "/": {
+      lang: "zh-CN"
+    },
+    "/en/": {
       lang: "en-US"
     },
-    "/zh/": {
-      lang: "zh-CN"
-    }
   },
   themeConfig: {
     repo: "Renovamen/vuepress-theme-gungnir",
@@ -21,6 +21,7 @@ module.exports = {
     lastUpdated: true,
     hitokoto: true, // enable hitokoto (一言) or not?
     searchIcon: "ri-search-2-line",
+    codeTheme: "gungnir-dark",
     languageIcon: "hi-translate",
     rss: {
       site_url: "https://mrybo.github.io",
@@ -47,17 +48,17 @@ module.exports = {
     },
     locales: {
       "/": {
+        label: "简体中文",
+        selectText: "选择语言",
+        nav: require("./configs/nav/zh"),
+        sidebar: require("./configs/sidebar/zh")
+      },
+      "/en/": {
         label: "English",
         selectText: "Languages",
         nav: require("./configs/nav/en"),
         sidebar: require("./configs/sidebar/en")
       },
-      "/zh/": {
-        label: "简体中文",
-        selectText: "选择语言",
-        nav: require("./configs/nav/zh"),
-        sidebar: require("./configs/sidebar/zh")
-      }
     },
     personalInfo: {
       name: "Gungnir",
@@ -111,8 +112,34 @@ module.exports = {
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a>
     `
   },
+  
   markdown: {
     // lineNumbers: true,
     extractHeaders: ["h2", "h3", "h4", "h5"]
+  },
+
+  configureWebpack: () => {
+    const NODE_ENV = process.env.NODE_ENV;
+    if (NODE_ENV === "production") {
+      return {
+        output: {
+          publicPath:
+            "https://cdn.jsdelivr.net/gh/mrybo/mrybo.github.io@gh-pages/"
+        },
+        resolve: {
+          alias: {
+            public: path.resolve(__dirname, "./public")
+          }
+        }
+      };
+    } else {
+      return {
+        resolve: {
+          alias: {
+            public: path.resolve(__dirname, "./public")
+          }
+        }
+      };
+    }
   }
 };
