@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   title: "Bo Yang blog",
   description: "This is BoYang's blog",
