@@ -23,7 +23,7 @@ module.exports = {
     hitokoto: true,
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
-
+    nav: require('./configs/nav'),
 
     rss: {
       site_url: "https://mrybo.github.io",
