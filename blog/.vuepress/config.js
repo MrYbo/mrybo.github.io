@@ -23,7 +23,7 @@ module.exports = {
     searchIcon: "ri-search-2-line",
     languageIcon: "hi-translate",
     rss: {
-      site_url: "https://vuepress-theme-gungnir.vercel.app",
+      site_url: "https://mrybo.github.io",
       copyright: "Renovamen 2018-2021",
       count: 20
     },
