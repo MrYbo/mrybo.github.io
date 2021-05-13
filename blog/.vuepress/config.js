@@ -13,6 +13,14 @@ module.exports = {
       }
     ]
   ],
+  locales: {
+    "/": {
+      lang: "en-US"
+    },
+    "/zh/": {
+      lang: "zh-CN"
+    }
+  },
   theme: "gungnir",
   themeConfig: {
     repo: "mrybo/mrybo.github.io",
@@ -23,50 +31,36 @@ module.exports = {
     hitokoto: true,
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
+    locales: {
+      "/": {
+        label: "English",
+        selectText: "Languages",
+        nav: require("./configs/nav/en"),
+        sidebar: require("./configs/sidebar/en")
+      },
+      "/zh/": {
+        label: "简体中文",
+        selectText: "选择语言",
+        nav: require("./configs/nav/zh"),
+        sidebar: require("./configs/sidebar/zh")
+      }
+    },
+
     rss: {
       site_url: "https://mrybo.github.io",
       copyright: "mrybo 2018-2021",
       count: 20
     },
-    // comment: {
-    //   owner: "This-is-an-Apple",
-    //   repo: "gitalk-comments",
-    //   clientId: "d6247712dc288a5a60ca",
-    //   clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
-    // },
-    // analytics: {
-    //   ga: "UA-146858305-1",
-    //   ba: "75381d210789d3eaf855fa16246860cc"
-    // },
+
     katex: true,
     mdPlus: {
       all: true
     },
+
     readingTime: {
       excludes: ["/about", "/tags/.*", "/links"]
     },
-    nav: [
-      {
-        text: "Home",
-        link: "/",
-        icon: "fa-fort-awesome"
-      },
-      {
-        text: "About",
-        link: "/about/",
-        icon: "fa-paw"
-      },
-      {
-        text: "Tags",
-        link: "/tags/",
-        icon: "fa-tag"
-      },
-      {
-        text: "Links",
-        link: "/links/",
-        icon: "fa-satellite-dish"
-      },
-    ],
+
     personalInfo: {
       name: "BoYang",
       avatar: "/img/avatar.jpg",
@@ -78,6 +72,7 @@ module.exports = {
         email: "aoeybo@gmail.com"
       }
     },
+
     homeHeaderImages: [
       {
         path: "/img/home-bg/1.jpg",
@@ -99,6 +94,7 @@ module.exports = {
         path: "/img/home-bg/5.jpg"
       }
     ],
+
     pages: {
       tags: {
         title: "Tags",
@@ -108,6 +104,7 @@ module.exports = {
           mask: "rgba(211, 136, 37, .5)"
         }
       },
+
       links: {
         title: "Links",
         subtitle:
@@ -124,8 +121,19 @@ module.exports = {
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
     `
   },
+
+    // comment: {
+    //   owner: "This-is-an-Apple",
+    //   repo: "gitalk-comments",
+    //   clientId: "d6247712dc288a5a60ca",
+    //   clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
+    // },
+  
+    analytics: {
+      ga: "G-0WDP35ELK5",
+    },
+  
   markdown: {
-    // lineNumbers: true,
     extractHeaders: ["h2", "h3", "h4", "h5"]
   },
   configureWebpack: () => {
