@@ -1,8 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  title: "Renovamen (Xiaohan Zou)",
-  description: "Renovamen's blog, powered by VuePress, themed by Gungnir.",
+  title: "BoYang Blog",
+  description: "This is BoYang's blog",
   head: [
     ["link", { rel: "icon", href: "/img/logo.svg" }],
     [
@@ -15,29 +15,29 @@ module.exports = {
   ],
   theme: "gungnir",
   themeConfig: {
-    repo: "Renovamen/renovamen.github.io",
+    repo: "mrybo/mrybo.github.io",
     docsDir: "blog",
-    docsBranch: "master",
+    docsBranch: "main",
     editLinks: true,
     lastUpdated: true,
     hitokoto: true,
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
     rss: {
-      site_url: "https://zxh.io",
-      copyright: "Renovamen 2018-2021",
+      site_url: "https://mrybo.github.io",
+      copyright: "mrybo 2018-2021",
       count: 20
     },
-    comment: {
-      owner: "This-is-an-Apple",
-      repo: "gitalk-comments",
-      clientId: "d6247712dc288a5a60ca",
-      clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
-    },
-    analytics: {
-      ga: "UA-146858305-1",
-      ba: "75381d210789d3eaf855fa16246860cc"
-    },
+    // comment: {
+    //   owner: "This-is-an-Apple",
+    //   repo: "gitalk-comments",
+    //   clientId: "d6247712dc288a5a60ca",
+    //   clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
+    // },
+    // analytics: {
+    //   ga: "UA-146858305-1",
+    //   ba: "75381d210789d3eaf855fa16246860cc"
+    // },
     katex: true,
     mdPlus: {
       all: true
@@ -66,23 +66,16 @@ module.exports = {
         link: "/links/",
         icon: "fa-satellite-dish"
       },
-      {
-        text: "Portfolio",
-        link: "https://portfolio.zxh.io/",
-        icon: "gi-jumping-dog"
-      }
     ],
     personalInfo: {
-      name: "Renovamen",
+      name: "BoYang",
       avatar: "/img/avatar.jpg",
-      description: "いつか、私がヒトじゃなくなっても",
+      description: "desc ...",
       sns: {
-        github: "Renovamen",
-        linkedin: "xiaohan-zou-55bba0160",
-        facebook: "renovamen.zou",
-        twitter: "renovamen_zxh",
-        zhihu: "chao-neng-gui-su",
-        email: "renovamenzxh@gmail.com"
+        github: "mrybo",
+        twitter: "UBgMJZzxwfTd4Dj",
+        zhihu: "zhu-mu-bai-3",
+        email: "aoeybo@gmail.com"
       }
     },
     homeHeaderImages: [
@@ -126,10 +119,9 @@ module.exports = {
       }
     },
     footer: `
-      &copy; <a href="https://github.com/Renovamen" target="_blank">Renovamen</a> 2018-2021
+      &copy; <a href="https://github.com/mrybo" target="_blank">Mrybo</a> 2018-2021
       <br>
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
-      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
     `
   },
   markdown: {
@@ -142,7 +134,7 @@ module.exports = {
       return {
         output: {
           publicPath:
-            "https://cdn.jsdelivr.net/gh/Renovamen/renovamen.github.io@gh-pages/"
+            "https://cdn.jsdelivr.net/gh/mrybo/mrybo.github.io@gh-pages/"
         },
         resolve: {
           alias: {
