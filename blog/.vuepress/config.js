@@ -1,6 +1,4 @@
 const path = require("path");
-const utils = require('./utils/one');
-const oneData = new Promise(utils.getOneData());
 
 module.exports = {
   title: "BoYang Blog",
