@@ -57,7 +57,7 @@ export default {
 @require '../styles/mixins.styl'
 
 .post-item-img
-  margin 80px auto 100px
+  margin 80px auto 80px
   position relative
   padding 0 40px
   display block
@@ -131,7 +131,7 @@ export default {
   .post-item-img
     &__img
       width 480px
-      height 280px
+      height 250px
     &:nth-child(odd) .else
       left 500px
     &:nth-child(even) .else
@@ -139,7 +139,7 @@ export default {
     .else
       top 10px
       width 420px
-      height 290px
+      height 250px
     &__date
       font-size 12px
       margin 50px 0 0 60px
