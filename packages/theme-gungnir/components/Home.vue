@@ -235,7 +235,6 @@ export default {
         letter-spacing 0
         border-radius 10px
         box-sizing initial
-        white-space nowrap
         min-width 40%
         max-width 60%
         position absolute
