@@ -1,4 +1,6 @@
 const path = require("path");
+const utils = require('./utils/one');
+const oneData = new Promise(utils.getOneData());
 
 module.exports = {
   title: "BoYang Blog",
@@ -24,7 +26,7 @@ module.exports = {
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
     nav: require('./configs/nav'),
-
+    chartjs: true,
     rss: {
       site_url: "https://mrybo.github.io",
       copyright: "mrybo 2018-2021",
@@ -36,6 +38,18 @@ module.exports = {
       all: true
     },
 
+    comment: {
+      owner: "mrybo",
+      repo: "gitalk-comments",
+      clientId: "c7221311876186a6a1eb",
+      clientSecret: "696a4a2db69f16408fe8a365605e507cdd8d6382"
+    },
+  
+    analytics: {
+      ga: "G-0WDP35ELK5",
+      ba: "e8928ae9c3c4d59ba818c0e0400c9221"
+    },
+
     readingTime: {
       excludes: ["/about", "/tags/.*", "/links"]
     },
@@ -43,7 +57,7 @@ module.exports = {
     personalInfo: {
       name: "BoYang",
       avatar: "/img/avatar.jpg",
-      description: "desc ...",
+      description: "喜欢花, 喜欢海, 喜欢日出和日落, 浪漫的年纪别活的太无趣",
       sns: {
         github: "mrybo",
         twitter: "UBgMJZzxwfTd4Dj",
@@ -54,28 +68,32 @@ module.exports = {
 
     homeHeaderImages: [
       {
-        path: "/img/home-bg/1.jpg",
-        mask: "rgba(40, 57, 101, .4)"
-      },
-      {
-        path: "/img/home-bg/2.jpg",
-        mask: "rgb(251, 170, 152, .4)"
-      },
-      {
-        path: "/img/home-bg/3.jpg",
+        path: "http://image.wufazhuce.com/Fir26t219ml4VbYx_x2GYOxb2XVI",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "/img/home-bg/4.jpg",
-        mask: "rgba(19, 75, 50, .4)"
+        path: "http://image.wufazhuce.com/FjmT8AvyPaqSYND-nTbYLwgcHX0K",
+        mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "/img/home-bg/5.jpg",
-        mask: "rgba(19, 75, 50, .4)"
+        path: "http://image.wufazhuce.com/Fo_yknk5Fvndw8LS8j_EdNbqpxAR",
+        mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "/img/home-bg/6.jpg",
-        mask: "rgba(19, 75, 50, .4)"
+        path: "http://image.wufazhuce.com/FvkvAKJx4lK8tymfJy0BgwOFpLz4",
+        mask: "rgba(68, 74, 83, .4)"
+      },
+      {
+        path: "http://image.wufazhuce.com/FvPpajCeG1ObS871nCOWfs2fuODV",
+        mask: "rgba(68, 74, 83, .4)"
+      },
+      {
+        path: "http://image.wufazhuce.com/FjUyfkQkt4lvkx53kwyW5oPzJ92I",
+        mask: "rgba(68, 74, 83, .4)"
+      },
+      {
+        path: "http://image.wufazhuce.com/FiC0ATa1wyvortnCe4pBBi0V3V93",
+        mask: "rgba(68, 74, 83, .4)"
       }
     ],
 
@@ -105,17 +123,6 @@ module.exports = {
       Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
     `
   },
-
-    // comment: {
-    //   owner: "This-is-an-Apple",
-    //   repo: "gitalk-comments",
-    //   clientId: "d6247712dc288a5a60ca",
-    //   clientSecret: "ed1ec72417828343c79ed910a1b77d140fa715a7"
-    // },
-  
-    analytics: {
-      ga: "G-0WDP35ELK5",
-    },
   
   markdown: {
     extractHeaders: ["h2", "h3", "h4", "h5"]
