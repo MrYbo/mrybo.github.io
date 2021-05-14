@@ -23,9 +23,9 @@
         <div class="hero-info">
           <div class="hero-info__text">
             <h1>{{ $themeConfig.personalInfo.name || $title }}</h1>
-            <p class="description">
+            <div class="description">
               {{ $themeConfig.personalInfo.description || $description }}
-            </p>
+            </div>
           </div>
         </div>
 
