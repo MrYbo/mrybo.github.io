@@ -24,7 +24,12 @@ module.exports = {
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
     nav: require('./configs/nav'),
+
     chartjs: true,
+    mermaid: true,
+    roughviz: true,
+    markmap: true,
+
     rss: {
       site_url: "https://mrybo.github.io",
       copyright: "mrybo 2018-2021",
@@ -44,7 +49,7 @@ module.exports = {
     },
   
     analytics: {
-      ga: "G-0WDP35ELK5",
+      ga: "G-992KFHF53C",
       ba: "e8928ae9c3c4d59ba818c0e0400c9221"
     },
 
@@ -66,33 +71,29 @@ module.exports = {
 
     homeHeaderImages: [
       {
-        path: "http://image.wufazhuce.com/Fir26t219ml4VbYx_x2GYOxb2XVI",
+        path: "/img/home-bg/1.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "http://image.wufazhuce.com/FjmT8AvyPaqSYND-nTbYLwgcHX0K",
+        path: "/img/home-bg/2.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "http://image.wufazhuce.com/Fo_yknk5Fvndw8LS8j_EdNbqpxAR",
+        path: "/img/home-bg/3.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "http://image.wufazhuce.com/FvkvAKJx4lK8tymfJy0BgwOFpLz4",
+        path: "/img/home-bg/4.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "http://image.wufazhuce.com/FvPpajCeG1ObS871nCOWfs2fuODV",
+        path: "/img/home-bg/5.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
       {
-        path: "http://image.wufazhuce.com/FjUyfkQkt4lvkx53kwyW5oPzJ92I",
+        path: "/img/home-bg/6.jpg",
         mask: "rgba(68, 74, 83, .4)"
       },
-      {
-        path: "http://image.wufazhuce.com/FiC0ATa1wyvortnCe4pBBi0V3V93",
-        mask: "rgba(68, 74, 83, .4)"
-      }
     ],
 
     pages: {
