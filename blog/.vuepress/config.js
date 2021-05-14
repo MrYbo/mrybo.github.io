@@ -51,7 +51,7 @@ module.exports = {
     },
   
     analytics: {
-      ga: "992KFHF53C",
+      ga: "G-992KFHF53C",
       ba: "e8928ae9c3c4d59ba818c0e0400c9221"
     },
 
