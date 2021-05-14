@@ -143,7 +143,7 @@ module.exports = (options, ctx) => {
           : false
       ],
       [
-        "@vuepress/plugin-google-analytics",
+        "@vuepress/google-analytics",
         analytics && analytics.ga ? { ga: analytics.ga } : false
       ],
       [
