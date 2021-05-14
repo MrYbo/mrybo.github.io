@@ -26,7 +26,10 @@ module.exports = {
     searchIcon: "ri-search-2-line",
     codeTheme: "gungnir-dark",
     nav: require('./configs/nav'),
-
+    
+    mdPlus: {
+      all: true
+    },
     chartjs: true,
     mermaid: true,
     roughviz: true,
@@ -39,9 +42,6 @@ module.exports = {
     },
 
     katex: true,
-    mdPlus: {
-      all: true
-    },
 
     comment: {
       owner: "mrybo",
