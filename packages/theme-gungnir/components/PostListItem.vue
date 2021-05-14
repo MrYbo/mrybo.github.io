@@ -185,7 +185,7 @@ export default {
 @media (max-width: $MQMobileNarrow)
   .post-item-img
     margin-top 100px
-    border-bottom none
+    background-color: rgba(72, 65, 40, .3)
     max-width 400px
     &__img
       width 100%
