@@ -13,7 +13,9 @@ module.exports = {
       }
     ]
   ],
+  
   theme: "gungnir",
+
   themeConfig: {
     repo: "mrybo/mrybo.github.io",
     docsDir: "blog",
