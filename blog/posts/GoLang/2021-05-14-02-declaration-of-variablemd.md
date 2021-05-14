@@ -4,7 +4,7 @@ subtitle: go语言变量申明
 author: BoYang
 date: 2021-15-14
 header_style: image
-header_img: /img/in-post/2021-05/golang.png
+header_img: /img/in-post/2021-05/header2.png
 header_mask: rgba(40, 57, 101, .4)
 catalog: true
 tags:
