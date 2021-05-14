@@ -236,8 +236,8 @@ export default {
         border-radius 10px
         box-sizing initial
         white-space nowrap
-        width 36%
-        max-width 500px
+        min-width 40%
+        max-width 60%
         position absolute
         left 0
         right 0
