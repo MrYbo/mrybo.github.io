@@ -53,7 +53,6 @@ const platform_links = {
   weibo: "http://weibo.com/u/",
   email: "mailto:"
 };
-
 const platform_icons = {
   github: "fa-github-alt",
   linkedin: "fa-linkedin-in",
@@ -63,7 +62,6 @@ const platform_icons = {
   weibo: "fa-weibo",
   email: "fa-envelope"
 };
-
 export default {
   props: {
     large: Boolean
@@ -91,9 +89,7 @@ export default {
 
 <style lang="stylus">
 @require '../styles/mixins.styl'
-
 .sns-wrapper
-  margin-top 270px
   padding 0
   .icon-stack
     min-width 50px

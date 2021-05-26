@@ -60,7 +60,6 @@
 import PostList from "@theme/components/PostList";
 import SNS from "@theme/components/SNS";
 import { throttle } from "@theme/utils/time";
-
 export default {
   components: {
     PostList,
@@ -96,7 +95,6 @@ export default {
       Math.random() * this.$themeConfig.homeHeaderImages.length
     );
     window.addEventListener("scroll", throttle(this.handleScroll, 50));
-
     fetch("https://v1.hitokoto.cn")
       .then((response) => response.json())
       .then((data) => {
@@ -105,11 +103,9 @@ export default {
       })
       .catch(console.error);
   },
-
   beforeDestroy() {
     window.removeEventListener("scroll", throttle(this.handleScroll, 50));
   },
-
   methods: {
     // switch to the next header image
     switchImage(n) {
@@ -134,7 +130,6 @@ export default {
 <style lang="stylus">
 @require '../styles/mixins.styl'
 @require '../styles/mode.styl'
-
 .home-blog
   padding 0
   padding-bottom 150px
@@ -143,7 +138,6 @@ export default {
     margin 0 auto
     position relative
     box-sizing border-box
-    padding 0 20px
     height 100vh
     display flex
     align-items center
@@ -157,15 +151,15 @@ export default {
       height 100%
       position absolute
       z-index 1
-
     .header-content
       z-index 2
+      width 36%
+      max-width 500px
+      display flex
+      flex-direction column
+      align-items center
+      justify-content center
       .hero-avatar
-        position absolute
-        top 50%
-        margin-top -140px
-        left 50%
-        margin-left -65px
         width 120px
         height 120px
         cursor auto
@@ -177,7 +171,6 @@ export default {
           transform(rotate(360deg))
         &:hover + .hero-bubble
           opacity 1
-
       .hero-bubble
         opacity 0
         position absolute
@@ -228,21 +221,15 @@ export default {
           transform(translateY(0))
         100%
           transform(translateY(10px))
-
       .hero-info
         background rgba(0, 0, 0, .5)
+        width 100%
         padding 17px
         letter-spacing 0
         border-radius 10px
         box-sizing initial
-        min-width 40%
-        max-width 60%
-        position absolute
-        left 0
-        right 0
-        margin auto
-        top 50%
-        margin-top 15px
+        white-space nowrap
+        margin-top 20px
         &__text
           padding-top 0
           padding-bottom 0
@@ -258,10 +245,8 @@ export default {
             font-weight 300
             line-height 15px
             margin-bottom 0
-
       .sns-wrapper
-        margin-top 270px
-
+        margin-top 10px
       .img-prev, .img-next
         cursor pointer
         position absolute
@@ -283,7 +268,6 @@ export default {
       .img-next
         right 0
         border-radius 3px 0 0 3px
-
       .arrow-down
         position absolute
         bottom 20px
@@ -296,17 +280,14 @@ export default {
           &:active,
           &:hover
             color #a7a7a7
-
   .home-blog-wrapper
     margin 20px auto 0
     max-width $homePageWidth
-
 @media (min-width: $MQIpad)
   .home-blog .hero
     background-attachment fixed
     .hero-info__text
       gungnir-font()
-
 @media (max-width: $MQIpad)
   .home-blog
     .hide-on-mobile
@@ -322,7 +303,6 @@ export default {
           font-size 80px !important
     .home-blog-wrapper
       padding 0 13px 0 14px
-
 @media (max-width: $MQMobile)
   .home-blog
     .hero

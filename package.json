@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "description": "my blog",
-  "author": "Renovamen <aoeybo@gmail.com>",
+  "author": "mrybo<aoeybo@gmail.com>",
   "license": "MIT",
   "private": true,
   "workspaces": [

@@ -49,12 +49,10 @@
 
 <script>
 import ToggleMode from "@theme/components/ToggleMode";
-
 export default {
   components: {
     ToggleMode
   },
-
   data() {
     return {
       isMenuOpen: false,
@@ -64,27 +62,21 @@ export default {
       borderLen: "0% 314.15926%"
     };
   },
-
   computed: {},
-
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
   },
-
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);
   },
-
   methods: {
     handleScroll() {
       const currentTop = window.pageYOffset;
-      const docuHeight = document.getElementById("theme-container")
-        .offsetHeight;
+      const docuHeight =
+        document.getElementById("theme-container").offsetHeight;
       const windowHeight = document.documentElement.clientHeight;
-
       let percent = (currentTop / (docuHeight - windowHeight)) * 100;
       if (percent > 100) percent = 100;
-
       if (isNaN(percent) || Math.round(percent) <= 0) {
         percent = 0;
         this.isTextVisible = false;
@@ -94,7 +86,6 @@ export default {
         this.menuText = Math.round(percent) + "%";
         this.isBtnIconVisible = false;
       }
-
       this.borderLen = 3.1415926 * (percent || 0) + "% 314.15926%";
     },
     toggleMenu() {
@@ -119,25 +110,20 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../styles/mixins.styl'
-
 // Variables
 $menu-btn-size = 50px
 $menu-btn-radius = 70px
 $menu-btn-transform-origin = $menu-btn-radius + (0.8 * $menu-btn-size / 2)
-
 // Colors
 $menu-btn-primary-color = $accentColor
 $menu-btn-gray = lighten(black, 35%)
-
 // Easings
 $bounce = cubic-bezier(0.5, -0.5, 0.5, 1.5)
 $bezier = cubic-bezier(0.64, 0.04, 0.35, 1)
-
 // Timings
 $delay = 400ms
 $time = 250ms
 $longer-time = ($time*2)
-
 .menu-btn-container
   position fixed
   bottom 20px
@@ -145,12 +131,10 @@ $longer-time = ($time*2)
   width $menu-btn-size
   height $menu-btn-size
   z-index 40
-
   .menu-btn-wrapper
     position relative
     width 100%
     height 100%
-
   .menu-text
     gungnir-font()
     color white
@@ -158,7 +142,6 @@ $longer-time = ($time*2)
     text-align center
     line-height $menu-btn-size
     font-size 15px
-
   .menu-svg
     $wider = 6px
     position absolute
@@ -175,7 +158,6 @@ $longer-time = ($time*2)
       transform(rotate(-90deg))
       transform-origin 50% 50%
       stroke-dasharray 0% 314.15926%
-
   &.open
     .menu-btn
       span
@@ -193,11 +175,9 @@ $longer-time = ($time*2)
           opacity 0
         &:last-child
           transform(translate(-50%, -50%) rotate(-45deg))
-
     .menu-btn-child-wrapper
       transform(translateX((- $menu-btn-radius)))
       transition-delay 0s
-
     .menu-btn-child
       transition-delay $delay
       & >>> .ov-icon
@@ -219,7 +199,6 @@ $longer-time = ($time*2)
       display none
       @media (max-width: $MQMobile)
         display flex
-
 .menu-btn,
 .menu-btn-child-wrapper
   position absolute
@@ -230,14 +209,12 @@ $longer-time = ($time*2)
   bottom 0
   left 0
   margin auto
-
 .menu-btn
   border-radius 50%
   background-color $menu-btn-primary-color
   z-index 5
   box-shadow 0px 0px 5px 1px rgba(0, 0, 0, 0.2)
   transition(all $time ease-in-out $delay)
-
   span
     position absolute
     top 50%
@@ -254,13 +231,11 @@ $longer-time = ($time*2)
       margin-left -10px
     &:last-child
       margin-left 10px
-
 .menu-btn-child-wrapper
   transition(transform 0.3s $bounce $delay)
   z-index 4
   width 80%
   height 80%
-
 .menu-btn-child
   position absolute
   display flex
@@ -277,15 +252,12 @@ $longer-time = ($time*2)
   background-color $menu-btn-gray
   transform-origin $menu-btn-transform-origin
   transition(all $time $bezier)
-
   &:nth-child(2), &:nth-child(5)
     .ov-icon
       transform(rotate(-45deg))
-
   &:nth-child(3), &:nth-child(4)
     .ov-icon
       transform(rotate(-90deg))
-
   & >>> .ov-icon
     opacity 0
     visibility hidden
